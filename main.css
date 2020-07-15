@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: sans-serif;
+	overflow-x: hidden;
 }
 
 a {
@@ -13,15 +14,9 @@ li {
 	list-style-type: none;
 }
 
-.main-container {
-	display: flex;
-	flex-direction: column;
-}
-
 .banner-container {
-	height: 500px;
-	width: 100%;
 	background-image: url(img/banner.jpg);
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -38,32 +33,35 @@ li {
 .socials-container ul {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 .socials-container li {
-	padding: 10px 20px;
+	padding: 1% 10%;
 }
 
 .socials-container a {
 	font-size: 40px;
 	font-weight: 500;
-	color: white;
-}
-
-.socials-container a:hover {
-	color: grey;
 }
 
 .nav {
-	position: sticky;
-	width: 100%;
-	top: 0;
-	background-color: rgba(240, 128, 128, 0.5);
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	background-color: burlywood;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 .nav a {
 	font-size: 1.1em;
 	font-weight: 500;
+	border-right: 1px solid brown;
+	padding-right: 20px;
 }
 
 .nav a:hover {
@@ -89,50 +87,13 @@ li {
 	border: 2px solid rgba(105, 42, 42, 0.6);
 }
 
-.content-container {
-	margin: 50px 0;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	min-height: 40vh;
-}
-
-.content-img-container {
-	flex: 50%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.content-img {
-	max-width: 80%;
-}
-
-.content-blog-container {
-	flex: 50%;
+.footer-container {
+	bottom: 0;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.content-blog {
-	text-align: right;
-	font-size: 15px;
-	margin-left: 30%;
-	margin-right: 10%;
-	line-height: 1.2em;
-}
-
-.content-blog-title {
-	text-align: right;
-	margin-bottom: 10px;
-	font-size: 25px;
-	margin-left: 30%;
-	margin-right: 10%;
-}
-
-.footer-container {
-	width: 100%;
+	background-color: burlywood;
 }
 
 @media screen and (max-width: 600px) {
@@ -148,23 +109,5 @@ li {
 @media screen and (max-width: 800px) {
 	.banner-title {
 		font-size: 1.5em;
-	}
-
-	.content-container {
-		flex-direction: column;
-	}
-
-	.content-blog {
-		margin: 5%;
-		text-align: center;
-	}
-
-	.content-blog-title {
-		text-align: center;
-		margin: 10px 0 10px 0;
-	}
-
-	.content-img-container {
-		justify-content: center;
 	}
 }

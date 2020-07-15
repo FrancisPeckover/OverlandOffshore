@@ -1,0 +1,20 @@
+.banner-container {
+	height: 100vh;
+}
+
+.socials-container a {
+	color: white;
+}
+
+.socials-container a:hover {
+	color: grey;
+}
+
+@media screen and (max-width: 600px) {
+	.socials-container ul {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 800px) {
+}

@@ -9,48 +9,65 @@
         <link rel="stylesheet" href="merch.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="img/banner.jpg">
+        <script src="main.js"></script>
     </head>
 
     <body>
-            <nav class="nav">
+        <ul class="nav-desktop">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="merch.html">Merch</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="contact" href="">Drop us a line</a></li>
+        </ul>
+
+        <a class="nav-mobile-icon" onclick="toggleMobileNav()" href="javascript:void(0);">
+            <i class="fa fa-bars"></i>
+            <ul style="display: none;" id="nav-mobile" class="nav-mobile">
+                <li><a class="nav-mobile-link" href="index.html">Home</a></li>
+                <li><a class="nav-mobile-link" href="merch.html">Merch</a></li>
+                <li><a class="nav-mobile-link" href="about.html">About</a></li>
+                <li><a class="nav-mobile-link" class="contact" href="">Drop us a line</a></li>
+            </ul>
+        </a>
+
+        <div class="banner-container">
+            <div class="banner-title">
+                <h1>Merchandise</h1>
+            </div>
+        </div>   
+
+        <div class="merch-container">
+            <a href="" class="merch-card">
+                <img class="merch-icon" src="img/hat.jpg" alt="">
+                <p class="merch-text">Hats - $69</p>
+            </a>
+            <a href="" class="merch-card">
+                <img class="merch-icon" src="img/tshirt.jpg" alt="">
+                <p class="merch-text">Tees - $69</p>
+            </a>
+            <a href="" class="merch-card">
+                <img class="merch-icon" src="img/hoodie.jpg" alt="">
+                <p class="merch-text">Hoodies - $69</p>
+            </a>
+            <a href="" class="merch-card">
+                <img class="merch-icon" src="img/hoodie.jpg" alt="">
+                <p class="merch-text">Hoodies - $69</p>
+            </a>
+            <a href="" class="merch-card">
+                <img class="merch-icon" src="img/hoodie.jpg" alt="">
+                <p class="merch-text">Hoodies - $69</p>
+            </a>
+        </div>
+
+        <div class="footer-container">
+            <div class="socials-container">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="merch.html">Merch</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a class="contact" href="">Drop us a line</a></li>
+                    <li><a class="fa fa-facebook" href=""></a></li>
+                    <li><a class="fa fa-youtube" href=""></a></li>
+                    <li><a class="fa fa-twitter" href=""></a></li>
+                    <li><a class="fa fa-instagram" href=""></a></li>
                 </ul>
-            </nav>
-
-            <div class="banner-container">
-                <div class="banner-title">
-                    <h1>Merchandise</h1>
-                </div>
-            </div>   
-
-            <div class="merch-container">
-                <a href="" class="merch-card">
-                    <img class="merch-icon" src="img/hat.jpg" alt="">
-                    <p class="merch-text">Hats - $69</p>
-                </a>
-                <a href="" class="merch-card">
-                    <img class="merch-icon" src="img/tshirt.jpg" alt="">
-                    <p class="merch-text">Tees - $69</p>
-                </a>
-                <a href="" class="merch-card">
-                    <img class="merch-icon" src="img/hoodie.jpg" alt="">
-                    <p class="merch-text">Hoodies - $69</p>
-                </a>
             </div>
-
-            <div class="footer-container">
-                <div class="socials-container">
-                    <ul>
-                        <li><a class="fa fa-facebook" href=""></a></li>
-                        <li><a class="fa fa-youtube" href=""></a></li>
-                        <li><a class="fa fa-twitter" href=""></a></li>
-                        <li><a class="fa fa-instagram" href=""></a></li>
-                    </ul>
-                </div>
-            </div>
+        </div>
     </body>
 </html>

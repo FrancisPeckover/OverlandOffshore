@@ -2,19 +2,26 @@
 	height: 100vh;
 }
 
+.banner-title {
+	margin-bottom: 100px;
+}
+
+.socials-container {
+	background-color: burlywood;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
 .socials-container a {
-	color: white;
+	color: black;
+}
+
+.socials-container li {
+	padding: 5px 15px;
 }
 
 .socials-container a:hover {
 	color: grey;
-}
-
-@media screen and (max-width: 600px) {
-	.socials-container ul {
-		flex-direction: column;
-	}
-}
-
-@media screen and (max-width: 800px) {
 }

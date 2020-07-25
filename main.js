@@ -5,5 +5,4 @@ function toggleMobileNav() {
 	} else {
 		mobNav.style.display = 'none';
 	}
-	console.log(mobNav.style.display);
 }

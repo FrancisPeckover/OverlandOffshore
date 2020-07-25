@@ -1,0 +1,16 @@
+.banner-container {
+	height: 30vh;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	padding: 1%;
+}
+
+.name-form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}

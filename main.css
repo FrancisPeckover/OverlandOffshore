@@ -47,7 +47,7 @@ li {
 	font-size: 2em;
 }
 
-.socials-container ul {
+.socials-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -63,32 +63,33 @@ li {
 	font-weight: 500;
 }
 
-.nav a {
-	font-size: 1.1em;
-	font-weight: 500;
-}
-
 .nav-desktop a {
-	padding-right: 20px;
-}
-
-.nav a:hover {
-	color: grey;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .nav-desktop li {
-	padding: 10px 20px;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .nav-desktop {
 	position: fixed;
+	width: 500px;
+	height: 30px;
 	top: 0;
 	right: 0;
 	margin: 1% 1%;
 	background: burlywood;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: space-evenly;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -102,7 +103,7 @@ li {
 	flex-direction: row;
 	width: 90%;
 	height: 100%;
-	transition: right 1s;
+	transition: right 500ms;
 }
 
 .nav-list {
@@ -136,7 +137,7 @@ li {
 	height: 5%;
 }
 
-.contact {
+.active {
 	padding: 0 10px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -163,8 +164,8 @@ li {
 }
 
 .mini-gallery-container > * {
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 	margin: 1%;
 }
 
@@ -183,6 +184,11 @@ li {
 
 	.banner-title {
 		font-size: 1em;
+	}
+
+	.mini-gallery-container > * {
+		width: 100px;
+		height: 100px;
 	}
 }
 

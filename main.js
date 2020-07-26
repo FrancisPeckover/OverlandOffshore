@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	addNav();
 });
 
+const mobileNavRight = '-82.5%';
 const footer = `<div class="footer-container" id="footer-container">
 		<div class="socials-container">
 			<ul>
@@ -29,7 +30,7 @@ const navigation = `<ul class="nav-desktop">
 		<li><a class="contact" href="contact.html">Drop us a line</a></li>
 	</ul>
 	
-	<div id="mobile-nav" class="mobile-nav" style="right: -80%;">
+	<div id="mobile-nav" class="mobile-nav" style="right: ${mobileNavRight};">
 		<a onclick="toggleMobileNav()" href="javascript:void(0);" class="mobile-nav-button"><i class="fa fa-bars"></i></a>
 		<ul class="nav-list">
 			<li><a class="mobile-nav-link" href="index.html">Home</a></li>
@@ -41,10 +42,10 @@ const navigation = `<ul class="nav-desktop">
 
 function toggleMobileNav() {
 	var mobNav = document.getElementById('mobile-nav');
-	if (mobNav.style.right == '-80%') {
+	if (mobNav.style.right == mobileNavRight) {
 		mobNav.style.right = '0';
 	} else {
-		mobNav.style.right = '-80%';
+		mobNav.style.right = mobileNavRight;
 	}
 	console.log(mobNav.style.right);
 }

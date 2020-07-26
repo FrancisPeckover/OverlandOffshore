@@ -3,6 +3,7 @@
 	margin: 0;
 	font-family: sans-serif;
 	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
 a {
@@ -94,48 +95,45 @@ li {
 	border-bottom-right-radius: 15px;
 }
 
-.nav-mobile-icon {
-	display: none;
+.mobile-nav {
 	position: fixed;
 	top: 0;
-	right: 0;
-	padding: 3%;
-	margin: 3%;
+	display: none;
+	flex-direction: row;
+	width: 90%;
+	height: 100%;
+	transition: right 1s;
+}
+
+.nav-list {
+	width: 100%;
+	height: 100%;
 	background: burlywood;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	z-index: 100;
+	padding: 5%;
 }
 
-.nav-mobile {
-	position: absolute;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	background-color: burlywood;
+.nav-list li {
 	width: 100%;
+	height: 40px;
+	display: flex;
+}
+
+.nav-list a {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 	height: 100%;
 }
 
-.nav-mobile li {
-	width: 100%;
-	height: 10%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 1% 0;
-}
-
-.nav-mobile-link {
-	background: rgb(206, 164, 110);
-	width: 100%;
-	height: 100%;
+.mobile-nav-button {
+	transform: translateY(100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 20px;
+	background: burlywood;
+	width: 15%;
+	height: 5%;
 }
 
 .contact {
@@ -151,9 +149,27 @@ li {
 	bottom: 0;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: burlywood;
+}
+
+.mini-gallery-container {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.mini-gallery-container > * {
+	height: 200px;
+	width: 200px;
+	margin: 1%;
+}
+
+.copyright {
+	padding: 1%;
 }
 
 @media screen and (max-width: 600px) {
@@ -161,8 +177,8 @@ li {
 		display: none;
 	}
 
-	.nav-mobile-icon {
-		display: block;
+	.mobile-nav {
+		display: flex;
 	}
 
 	.banner-title {

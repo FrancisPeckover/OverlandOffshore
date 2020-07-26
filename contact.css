@@ -2,15 +2,49 @@
 	height: 30vh;
 }
 
-.contact-form {
+.contact-content {
 	display: flex;
-	flex-direction: column;
 	padding: 1%;
-}
-
-.name-form {
-	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
+}
+
+form {
+	display: flex;
+	width: 60%;
+	padding: 1%;
+	flex-direction: column;
+}
+
+.form-element {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+textarea.form-input {
+	height: 150px;
+}
+
+.form-input {
+	width: 75%;
+	height: 30px;
+	border-radius: 5px;
+	margin-top: 5px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	resize: vertical;
+}
+
+input[type=submit] {
+	width: 100%;
+	padding: 0;
+	background-color: lightgreen;
+}
+
+input[type=submit]:hover {
+	background-color: rgb(92, 206, 92);
+	cursor: pointer;
 }

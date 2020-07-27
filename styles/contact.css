@@ -34,29 +34,27 @@ textarea.form-input {
 	border-radius: 5px;
 	margin-top: 5px;
 	padding: 10px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--colour-dark);
 	resize: vertical;
 }
 
 input[type=submit] {
 	width: 100%;
+	color: white;
 	padding: 0;
-	background-color: lightgreen;
+	background: var(--colour-light);
 }
 
 input[type=submit]:hover {
-	background-color: rgb(92, 206, 92);
+	background-color: var(--colour-dark);
 	cursor: pointer;
 }
 
 .side-content {
-	display: flex;
 	height: 100%;
 	width: 30%;
 	margin: 20px 0;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 
 .side-content > p {
@@ -74,7 +72,7 @@ input[type=submit]:hover {
 	}
 
 	label {
-		font-size: 15px;
+		font-size: 13px;
 	}
 
 	.side-content {

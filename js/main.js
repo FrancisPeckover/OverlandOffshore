@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	activePage();
 });
 
-const mobileNavRight = '-82.5%';
+const mobileNavRight = '-75%';
 const footerImages = [
 	'../img/boat1.jpg',
 	'../img/boat2.jpg',
@@ -26,14 +26,14 @@ const footer = `<div class="footer-container center" id="footer-container">
 			<li class="center"><a class="fa fa-twitter" href=""></a></li>
 			<li class="center"><a class="fa fa-instagram" href=""></a></li>
 		</ul>
-		<div class="mini-gallery-container center">
+		<div class="gallery center">
 			<img src=${footerImages[0]} alt="">
 			<img src=${footerImages[1]} alt="">
 			<img src=${footerImages[2]} alt="">
 			<img src=${footerImages[3]} alt="">
 			<img src=${footerImages[4]} alt="">
 		</div>
-		<p class="copyright">(c) Overland Offshore 2020. Website by magic</p>
+		<p class="copyright">(c) Overland Offshore 2020. Website by asian slave labour</p>
 	</div>`;
 
 const navigation = `<ul class="nav-desktop">
@@ -45,11 +45,12 @@ const navigation = `<ul class="nav-desktop">
 	
 	<div id="mobile-nav" class="mobile-nav" style="right: ${mobileNavRight};">
 		<a onclick="toggleMobileNav()" href="javascript:void(0);" class="mobile-nav-button center"><i class="fa fa-bars"></i></a>
-		<ul class="nav-list">
-			<li><a class="nav-link" href="index.html">Home</a></li>
-			<li><a class="nav-link" href="trips.html">Adventures</a></li>
-			<li><a class="nav-link" href="merch.html">Merch</a></li>
-			<li><a class="nav-link" href="contact.html">Drop us a line</a></li>
+		<div class="spacer"></div>
+		<ul class="nav-list fill">
+			<li><a class="nav-link fill" href=${links[0]}>Home</a></li>
+			<li><a class="nav-link fill" href=${links[1]}>Adventures</a></li>
+			<li><a class="nav-link fill" href=${links[2]}>Merch</a></li>
+			<li><a class="nav-link fill" href=${links[3]}>Drop us a line</a></li>
 		</ul>
 	</div>`;
 

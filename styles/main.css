@@ -1,7 +1,7 @@
 :root {
-	--colour-light: burlywood;
-	--colour-dark: rgb(161, 119, 63);
-	--colour-accent: rgb(97, 97, 33);
+	--colour-light: #343434;
+	--colour-dark: black;
+	--colour-accent: lightcyan;
 }
 
 * {
@@ -14,11 +14,11 @@
 
 a {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 a:hover {
-	color: grey;
+	color: var(--colour-accent);
 }
 
 li {
@@ -35,6 +35,9 @@ li {
 
 ::-webkit-scrollbar-thumb {
 	background: rgba(0, 0, 0, 0.5);
+}
+
+.rounded-border {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -42,14 +45,18 @@ li {
 }
 
 .banner-container {
-	background-image: url(../img/banner.jpg);
+	background-image: url(../img/camping2.jpg);
 	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	flex-direction: column;
 }
 
 .banner-title {
 	color: white;
 	font-size: 2em;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .banner-title h1 {
@@ -62,7 +69,6 @@ li {
 
 .socials-container a {
 	font-size: 40px;
-	font-weight: 500;
 }
 
 .socials-container li {
@@ -83,13 +89,13 @@ li {
 
 .nav-desktop {
 	position: fixed;
-	width: 100%;
+	width: 60%;
 	height: 30px;
 	top: 0;
-	left: 0;
-	background: var(--colour-light);
+	right: 0;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: flex-end;
+	background: var(--colour-light);
 }
 
 .mobile-nav {
@@ -102,8 +108,6 @@ li {
 }
 
 .nav-list {
-	width: 100%;
-	height: 100%;
 	background: var(--colour-light);
 	padding: 5%;
 }
@@ -115,23 +119,25 @@ li {
 }
 
 .nav-list a {
-	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	height: 100%;
 }
 
 .mobile-nav-button {
-	transform: translateY(100%);
-	background: var(--colour-light);
-	width: 10%;
+	transform: translate(0, 50%);
+	background: var(--colour-dark);
+	width: 15%;
 	height: 5%;
+}
+
+.spacer {
+	width: 10%;
 }
 
 .active {
 	padding: 0 10px;
-	border: 2px solid rgba(105, 42, 42, 0.6);
+	background: var(--colour-dark);
 }
 
 .footer-container {
@@ -141,18 +147,20 @@ li {
 	background: var(--colour-light);
 }
 
-.mini-gallery-container {
+.footer-container > .socials-container {
 	width: 100%;
+	padding: 5% 0;
+	background: var(--colour-dark);
 }
 
-.mini-gallery-container > * {
-	height: 150px;
-	width: 150px;
-	margin: 1%;
+.footer-container > .gallery {
+	padding: 20% 0;
 }
 
 .copyright {
+	text-align: center;
 	padding: 1%;
+	color: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -168,9 +176,9 @@ li {
 		font-size: 1em;
 	}
 
-	.mini-gallery-container > * {
-		width: 20%;
-		height: 100px;
+	.copyright {
+		font-size: 15px;
+		margin: 10% 0;
 	}
 }
 

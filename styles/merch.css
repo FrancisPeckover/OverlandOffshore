@@ -10,8 +10,6 @@
 }
 
 .merch-card {
-	width: 100%;
-	height: 100%;
 	overflow: hidden;
 }
 
@@ -21,13 +19,12 @@
 }
 
 .merch-text {
-	height: 10%;
-	font-size: 25px;
+	height: 5%;
+	font-size: 20px;
+	font-weight: 100;
 	text-align: center;
-	background-color: burlywood;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	background-color: var(--colour-light);
+	overflow: hidden;
 }
 
 @media screen and (max-width: 700px) {

@@ -1,0 +1,181 @@
+:root {
+	--colour-light: burlywood;
+	--colour-dark: rgb(161, 119, 63);
+	--colour-accent: rgb(97, 97, 33);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: grey;
+}
+
+li {
+	list-style-type: none;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--colour-dark);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.5);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.banner-container {
+	background-image: url(../img/banner.jpg);
+	background-size: cover;
+	flex-direction: column;
+}
+
+.banner-title {
+	color: white;
+	font-size: 2em;
+}
+
+.banner-title h1 {
+	text-align: center;
+}
+
+.socials-container {
+	background: var(--colour-light);
+}
+
+.socials-container a {
+	font-size: 40px;
+	font-weight: 500;
+}
+
+.socials-container li {
+	width: 70px;
+	height: 50px;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fill {
+	width: 100%;
+	height: 100%;
+}
+
+.nav-desktop {
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	top: 0;
+	left: 0;
+	background: var(--colour-light);
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	display: none;
+	width: 90%;
+	height: 100%;
+	transition: right 500ms;
+}
+
+.nav-list {
+	width: 100%;
+	height: 100%;
+	background: var(--colour-light);
+	padding: 5%;
+}
+
+.nav-list li {
+	width: 100%;
+	height: 40px;
+	display: flex;
+}
+
+.nav-list a {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.mobile-nav-button {
+	transform: translateY(100%);
+	background: var(--colour-light);
+	width: 10%;
+	height: 5%;
+}
+
+.active {
+	padding: 0 10px;
+	border: 2px solid rgba(105, 42, 42, 0.6);
+}
+
+.footer-container {
+	bottom: 0;
+	width: 100%;
+	flex-direction: column;
+	background: var(--colour-light);
+}
+
+.mini-gallery-container {
+	width: 100%;
+}
+
+.mini-gallery-container > * {
+	height: 150px;
+	width: 150px;
+	margin: 1%;
+}
+
+.copyright {
+	padding: 1%;
+}
+
+@media screen and (max-width: 600px) {
+	.nav-desktop {
+		display: none;
+	}
+
+	.mobile-nav {
+		display: flex;
+	}
+
+	.banner-title {
+		font-size: 1em;
+	}
+
+	.mini-gallery-container > * {
+		width: 20%;
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.banner-title {
+		font-size: 1.5em;
+	}
+}

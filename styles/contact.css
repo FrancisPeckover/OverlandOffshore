@@ -48,3 +48,36 @@ input[type=submit]:hover {
 	background-color: rgb(92, 206, 92);
 	cursor: pointer;
 }
+
+.side-content {
+	display: flex;
+	height: 100%;
+	width: 30%;
+	margin: 20px 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.side-content > p {
+	width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.contact-content {
+		flex-direction: column;
+	}
+
+	form {
+		width: 90%;
+		margin-bottom: 20px;
+	}
+
+	label {
+		font-size: 15px;
+	}
+
+	.side-content {
+		width: 90%;
+	}
+}

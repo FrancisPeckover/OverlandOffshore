@@ -1,35 +1,10 @@
 .banner-container {
-	height: 100vh;
-}
-
-.banner-title {
-	margin-bottom: 100px;
-}
-
-.socials-container {
-	background-color: burlywood;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-}
-
-.socials-container a {
-	color: black;
-}
-
-.socials-container li {
-	padding: 5px 15px;
-}
-
-.socials-container a:hover {
-	color: grey;
+	height: 50vh;
 }
 
 .content-container {
 	margin: 50px 0;
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	min-height: 40vh;
 }
@@ -47,9 +22,6 @@
 
 .content-blog-container {
 	flex: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .content-blog {
@@ -58,6 +30,7 @@
 	margin-left: 30%;
 	margin-right: 10%;
 	line-height: 1.2em;
+	overflow: hidden;
 }
 
 .content-blog-title {
@@ -80,7 +53,7 @@
 
 	.content-blog-title {
 		text-align: center;
-		margin: 10px 0 10px 0;
+		margin: 10px 0;
 	}
 
 	.content-img-container {

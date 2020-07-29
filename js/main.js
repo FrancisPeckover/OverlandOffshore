@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	activePage();
 });
 
+var prevPos = window.pageYOffset;
+window.onscroll = hideHeader;
+
 const footerImages = [
 	'../img/boat1.jpg',
 	'../img/boat2.jpg',
@@ -35,12 +38,16 @@ const footer = `<div class="footer center">
 		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by asian slave labour</p>
 	</div>`;
 
-const navigation = `<ul class="nav center">
+const navigation = `
+<div id="header" class="header">
+	<img src="../img/fishing1.jpg" alt="">
+	<ul class="nav center">
 		<a class="nav-link center fill" href=${links[0]}><i class="fa fa-home"></i><p>Home</p></a>
 		<a class="nav-link center fill" href=${links[1]}><i class="fa fa-ship"></i><p>Adventures</p></a>
 		<a class="nav-link center fill" href=${links[2]}><i class="fa fa-gift"></i><p>Merch</p></a>
-		<a class="nav-link center fill" href=${links[3]}><i class="fa fa-envelope"></i><p>Drop us a line</p></a>
-	</ul>`;
+		<a class="nav-link center fill" href=${links[3]}><i class="fa fa-envelope"></i><p>Drop a line</p></a>
+	</ul>
+</div>`;
 
 function addFooter() {
 	document.body.innerHTML += footer;
@@ -56,5 +63,21 @@ function activePage() {
 		if (document.body.id == links[i].innerHTML) {
 			links[i].classList.add('active');
 		}
+	}
+}
+
+function populateTrips() {
+	document.getElementById().innerHTML;
+}
+
+function hideHeader() {
+	if (window.screen.width > 600) {
+		var curPos = window.pageYOffset;
+		if (prevPos > curPos) {
+			document.getElementById('header').style.opacity = '1';
+		} else {
+			document.getElementById('header').style.opacity = '0';
+		}
+		prevPos = curPos;
 	}
 }

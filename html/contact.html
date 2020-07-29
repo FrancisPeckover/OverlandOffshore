@@ -22,22 +22,22 @@
         </div>  
 
         <div class="contact-content">
-            <form action="">
+            <form action="form.php" method="POST">
                 <div class="form-element">
-                    <label for="fname">First Name:</label>
-                    <input class="form-input" name="fname" type="text" placeholder="Your Name..">
+                    <label for="name">Name:</label>
+                    <input class="form-input" name="name" type="text" placeholder="Enter your Name.." required>
                 </div>
                 <div class="form-element">
-                    <label for="lname">Last Name:</label>
-                    <input class="form-input" name="lname" type="text" placeholder="Your Last Name..">
+                    <label for="subject">Subject:</label>
+                    <input class="form-input" name="subject" type="text" placeholder="Subject of enquiry..">
                 </div>
                 <div class="form-element">
                     <label for="email">Email: </label>
-                    <input class="form-input" type="email" name="email" id="email" placeholder="Enter your email..">
+                    <input class="form-input" type="email" name="email" id="email" placeholder="Enter your email.." required>
                 </div>
                 <div class="form-element">
                     <label for="message">Message:</label>
-                    <textarea class="form-input" placeholder="What are you enquiring about?.."></textarea>
+                    <textarea class="form-input" placeholder="What are you enquiring about?.." required></textarea>
                 </div>
     
                 <input class="form-input" type="submit" value="Submit">

@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	activePage();
 });
 
-const mobileNavRight = '-75%';
 const footerImages = [
 	'../img/boat1.jpg',
 	'../img/boat2.jpg',
@@ -19,8 +18,8 @@ const links = [
 	'contact.html'
 ];
 
-const footer = `<div class="footer-container center" id="footer-container">
-		<ul class="socials-container center">
+const footer = `<div class="footer center">
+		<ul class="socials center">
 			<li class="center"><a class="fa fa-facebook" href=""></a></li>
 			<li class="center"><a class="fa fa-youtube" href=""></a></li>
 			<li class="center"><a class="fa fa-twitter" href=""></a></li>
@@ -33,35 +32,15 @@ const footer = `<div class="footer-container center" id="footer-container">
 			<img src=${footerImages[3]} alt="">
 			<img src=${footerImages[4]} alt="">
 		</div>
-		<p class="copyright">(c) Overland Offshore 2020. Website by asian slave labour</p>
+		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by asian slave labour</p>
 	</div>`;
 
-const navigation = `<ul class="nav-desktop">
-		<li class="center fill"><a class="nav-link center fill" href=${links[0]}>Home</a></li>
-		<li class="center fill"><a class="nav-link center fill" href=${links[1]}>Adventures</a></li>
-		<li class="center fill"><a class="nav-link center fill" href=${links[2]}>Merch</a></li>
-		<li class="center fill"><a class="nav-link center fill" href=${links[3]}>Drop us a line</a></li>
-	</ul>
-	
-	<div id="mobile-nav" class="mobile-nav" style="right: ${mobileNavRight};">
-		<a onclick="toggleMobileNav()" href="javascript:void(0);" class="mobile-nav-button center"><i class="fa fa-bars"></i></a>
-		<div class="spacer"></div>
-		<ul class="nav-list fill">
-			<li><a class="nav-link fill" href=${links[0]}>Home</a></li>
-			<li><a class="nav-link fill" href=${links[1]}>Adventures</a></li>
-			<li><a class="nav-link fill" href=${links[2]}>Merch</a></li>
-			<li><a class="nav-link fill" href=${links[3]}>Drop us a line</a></li>
-		</ul>
-	</div>`;
-
-function toggleMobileNav() {
-	var mobNav = document.getElementById('mobile-nav');
-	if (mobNav.style.right == mobileNavRight) {
-		mobNav.style.right = '0';
-	} else {
-		mobNav.style.right = mobileNavRight;
-	}
-}
+const navigation = `<ul class="nav center">
+		<a class="nav-link center fill" href=${links[0]}><i class="fa fa-home"></i><p>Home</p></a>
+		<a class="nav-link center fill" href=${links[1]}><i class="fa fa-ship"></i><p>Adventures</p></a>
+		<a class="nav-link center fill" href=${links[2]}><i class="fa fa-gift"></i><p>Merch</p></a>
+		<a class="nav-link center fill" href=${links[3]}><i class="fa fa-envelope"></i><p>Drop us a line</p></a>
+	</ul>`;
 
 function addFooter() {
 	document.body.innerHTML += footer;

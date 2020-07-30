@@ -1,3 +1,43 @@
 .banner-container {
 	height: 30vh;
 }
+
+img,
+h2,
+p {
+	overflow: hidden;
+}
+
+.trips {
+	flex-direction: column;
+}
+
+.trip {
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	background: var(--colour-primary);
+	color: var(--colour-secondary);
+	padding: 2%;
+	display: grid;
+	width: 90%;
+	height: 200px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 2fr;
+	grid-template-areas: "image title" "image caption";
+	column-gap: 10px;
+	margin: 1%;
+}
+
+.trip img {
+	grid-area: image;
+}
+
+.trip h2 {
+	grid-area: title;
+}
+
+.trip p {
+	grid-area: caption;
+}

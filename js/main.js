@@ -2,18 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
 	addFooter();
 	addNav();
 	activePage();
+	autoCarousel();
 });
 
 var prevPos = window.pageYOffset;
 window.onscroll = hideHeader;
 
-const footerImages = [
-	'../img/boat1.jpg',
-	'../img/boat2.jpg',
-	'../img/camping1.jpg',
-	'../img/camping2.jpg',
-	'../img/fishing1.jpg'
+const carouselImages = [
+	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/camping1.jpg',
+	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/camping2.jpg',
+	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/boat1.jpg',
+	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/boat2.jpg',
+	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/fishing1.jpg'
 ];
+
 const links = [
 	'index.html',
 	'trips.html',
@@ -28,19 +30,21 @@ const footer = `<div class="footer center">
 			<li class="center"><a class="fa fa-twitter" href=""></a></li>
 			<li class="center"><a class="fa fa-instagram" href=""></a></li>
 		</ul>
-		<div class="gallery center">
-			<img src=${footerImages[0]} alt="">
-			<img src=${footerImages[1]} alt="">
-			<img src=${footerImages[2]} alt="">
-			<img src=${footerImages[3]} alt="">
-			<img src=${footerImages[4]} alt="">
+		<div id="carousel" class="carousel center">
+			<button class="fa fa-arrow-left center arrow" onclick="rotateCarousel(-1)"></button>
+			<img class="bg-bg-img" src=${carouselImages[0]} alt="">
+			<img class="bg-img" src=${carouselImages[1]} alt="">
+			<img src=${carouselImages[2]} alt="">
+			<img class="bg-img" src=${carouselImages[3]} alt="">
+			<img class="bg-bg-img" src=${carouselImages[4]} alt="">
+			<button class="fa fa-arrow-right center arrow" onclick="rotateCarousel(1)"></button>
 		</div>
-		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by asian slave labour</p>
+		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by Peckover Productions</p>
 	</div>`;
 
 const navigation = `
 <div id="header" class="header">
-	<img src="../img/fishing1.jpg" alt="">
+	<img src=${carouselImages[3]} alt="">
 	<ul class="nav center">
 		<a class="nav-link center fill" href=${links[0]}><i class="fa fa-home"></i><p>Home</p></a>
 		<a class="nav-link center fill" href=${links[1]}><i class="fa fa-ship"></i><p>Adventures</p></a>
@@ -60,14 +64,10 @@ function addNav() {
 function activePage() {
 	var links = document.getElementsByClassName('nav-link');
 	for (i = 0; i < links.length; i++) {
-		if (document.body.id == links[i].innerHTML) {
+		if (links[i].innerHTML.includes(document.body.id)) {
 			links[i].classList.add('active');
 		}
 	}
-}
-
-function populateTrips() {
-	document.getElementById().innerHTML;
 }
 
 function hideHeader() {
@@ -80,4 +80,37 @@ function hideHeader() {
 		}
 		prevPos = curPos;
 	}
+}
+
+function autoCarousel() {
+	let timer = 5;
+
+	rotateCarousel(1);
+
+	setTimeout(autoCarousel, timer * 1000);
+}
+
+function rotateCarousel(x) {
+	imgElements = getCarouselImgElements();
+
+	for (i = 0; i < imgElements.length; i++) {
+		let currentImg = carouselImages.indexOf(imgElements[i].src);
+		if (currentImg + x > carouselImages.length - 1) {
+			imgElements[i].src = carouselImages[0];
+		} else if (currentImg + x < 0) {
+			imgElements[i].src = carouselImages[carouselImages.length - 1];
+		} else {
+			imgElements[i].src = carouselImages[currentImg + x];
+		}
+	}
+}
+
+function getCarouselImgElements() {
+	let imgElements = [];
+	for (i = 0; i < document.getElementById('carousel').childNodes.length; i++) {
+		if (document.getElementById('carousel').childNodes[i] instanceof HTMLImageElement) {
+			imgElements.push(document.getElementById('carousel').childNodes[i]);
+		}
+	}
+	return imgElements;
 }

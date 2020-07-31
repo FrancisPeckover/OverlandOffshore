@@ -34,14 +34,3 @@ function addTrips() {
 		</div>`;
 	});
 }
-
-var tripCard = `
-<div class="trip rounded-border">
-	<img class="center fill" src="../img/camping2.jpg" alt="">
-	<h2 class="center">Title</h2>
-	<p class="center">This is a description of Lorem 
-		ipsum dolor sit amet consectetur adipisicing 
-		elit. Alias, eius. Lorem ipsum dolor sit, amet 
-		consectetur adipisicing elit. Molestias, quasi.
-	</p>
-</div>`;

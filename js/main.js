@@ -23,6 +23,19 @@ const links = [
 	'contact.html'
 ];
 
+const navigation = `
+<div id="header" class="header">
+	<a href="#" class="logo">
+		<img class="fill" src=${carouselImages[3]} alt="">
+	</a>
+	<ul class="nav center">
+		<a class="nav-link center fill" href=${links[0]}><i class="fa fa-home"></i><p>Home</p></a>
+		<a class="nav-link center fill" href=${links[1]}><i class="fa fa-ship"></i><p>Adventures</p></a>
+		<a class="nav-link center fill" href=${links[2]}><i class="fa fa-gift"></i><p>Merch</p></a>
+		<a class="nav-link center fill" href=${links[3]}><i class="fa fa-envelope"></i><p>Drop a line</p></a>
+	</ul>
+</div>`;
+
 const footer = `<div class="footer center">
 		<ul class="socials center">
 			<li class="center"><a class="fa fa-facebook" href=""></a></li>
@@ -30,6 +43,7 @@ const footer = `<div class="footer center">
 			<li class="center"><a class="fa fa-twitter" href=""></a></li>
 			<li class="center"><a class="fa fa-instagram" href=""></a></li>
 		</ul>
+		<button onclick="setScroll(0)">Back to top</button>
 		<div id="carousel" class="carousel center">
 			<button class="fa fa-arrow-left center arrow" onclick="rotateCarousel(-1)"></button>
 			<img class="bg-bg-img" src=${carouselImages[0]} alt="">
@@ -39,19 +53,8 @@ const footer = `<div class="footer center">
 			<img class="bg-bg-img" src=${carouselImages[4]} alt="">
 			<button class="fa fa-arrow-right center arrow" onclick="rotateCarousel(1)"></button>
 		</div>
-		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by Peckover Productions</p>
+		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by Peckover Digital</p>
 	</div>`;
-
-const navigation = `
-<div id="header" class="header">
-	<img src=${carouselImages[3]} alt="">
-	<ul class="nav center">
-		<a class="nav-link center fill" href=${links[0]}><i class="fa fa-home"></i><p>Home</p></a>
-		<a class="nav-link center fill" href=${links[1]}><i class="fa fa-ship"></i><p>Adventures</p></a>
-		<a class="nav-link center fill" href=${links[2]}><i class="fa fa-gift"></i><p>Merch</p></a>
-		<a class="nav-link center fill" href=${links[3]}><i class="fa fa-envelope"></i><p>Drop a line</p></a>
-	</ul>
-</div>`;
 
 function addFooter() {
 	document.body.innerHTML += footer;
@@ -68,6 +71,10 @@ function activePage() {
 			links[i].classList.add('active');
 		}
 	}
+}
+
+function setScroll(offset) {
+	scrollTo(0, offset);
 }
 
 function hideHeader() {

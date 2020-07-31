@@ -9,7 +9,10 @@ p {
 }
 
 .trips {
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
 }
 
 .trip {
@@ -40,4 +43,16 @@ p {
 
 .trip p {
 	grid-area: caption;
+}
+
+@media screen and (max-width: 1000px) {
+	.trips {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+	.trips {
+		grid-template-columns: 1fr 1fr;
+	}
 }

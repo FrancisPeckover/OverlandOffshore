@@ -16,6 +16,34 @@ var trips = [
 		description:
 			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
 		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+	},
+
+	{
+		location: 'weed Whaker',
+		description:
+			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
+		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+	},
+
+	{
+		location: 'Oregano',
+		description:
+			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
+		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+	},
+
+	{
+		location: 'China',
+		description:
+			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
+		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+	},
+
+	{
+		location: 'Moon Space',
+		description:
+			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
+		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
 	}
 ];
 
@@ -27,10 +55,11 @@ function addTrips() {
 	var container = document.getElementById('trips');
 	trips.forEach((trip) => {
 		container.innerHTML += `
-		<div class="trip">
-			<img class="center fill" src=${trip.image} alt="">
-			<h2 class="left-align">${trip.location}</h2>
-			<p class="left-align">${trip.description}</p>
-		</div>`;
+		<a onclick="" href="" class="card fill">
+                <img class="fill" src=${trip.image} alt="">
+                <div class="overlay">
+                    <p class="fill center">${trip.location}</p>
+                </div>
+            </a>`;
 	});
 }

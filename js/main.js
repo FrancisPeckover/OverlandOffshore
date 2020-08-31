@@ -53,7 +53,7 @@ const footer = `<div class="footer center">
 		<button class="fa fa-arrow-right center arrow" onclick="rotateCarousel(1)"></button>
 		</div>
 		<button class="to-top" onclick="setScroll(0)">Back to top</button>
-		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by Peckover Digital</p>
+		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by Duality Designs</p>
 	</div>`;
 
 function addFooter() {

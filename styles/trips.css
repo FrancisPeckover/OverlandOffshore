@@ -8,9 +8,42 @@ p {
 	overflow: hidden;
 }
 
+.content {
+	display: grid;
+	grid-template-rows: minmax(auto, 800px);
+	grid-template-columns: auto 10fr;
+}
+
+.selector {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.selector > img {
+	min-width: 200px;
+	min-height: auto;
+}
+
 @media screen and (max-width: 1000px) {
-	.trips {
+	.content {
 		grid-template-columns: 1fr;
+		grid-template-rows: 100px 10fr;
+	}
+
+	.selector > img {
+		min-width: 200px;
+	}
+
+	.selector {
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		overflow-y: hidden;
+		overflow-x: auto;
 	}
 }
 

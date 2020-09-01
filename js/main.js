@@ -9,11 +9,11 @@ var prevPos = window.pageYOffset;
 window.onscroll = hideHeader;
 
 const carouselImages = [
-	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/camping1.jpg',
-	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/camping2.jpg',
-	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/boat1.jpg',
-	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/boat2.jpg',
-	'file:///D:/Utilities/Programming/Projects/OverlandOffshore/img/fishing1.jpg'
+	'../img/camping1.jpg',
+	'../img/camping2.jpg',
+	'../img/boat1.jpg',
+	'../img/boat2.jpg',
+	'../img/fishing1.jpg'
 ];
 
 const links = [
@@ -26,7 +26,7 @@ const links = [
 const navigation = `
 <div id="header" class="header">
 	<a href="#" class="logo">
-		<img class="fill" src=${carouselImages[3]} alt="">
+		<img class="fill" src=${carouselImages[0]} alt="">
 	</a>
 	<ul class="nav center">
 		<a class="nav-link center fill" href=${links[0]}><i class="fa fa-home"></i><p>Home</p></a>
@@ -90,7 +90,7 @@ function hideHeader() {
 }
 
 function autoCarousel() {
-	let timer = 5;
+	let timer = 5; //seconds
 
 	rotateCarousel(1);
 
@@ -101,7 +101,8 @@ function rotateCarousel(x) {
 	imgElements = getCarouselImgElements();
 
 	for (i = 0; i < imgElements.length; i++) {
-		let currentImg = carouselImages.indexOf(imgElements[i].src);
+		let editSrc = '../' + imgElements[i].src.split('/').splice(3, 2).join('/');
+		let currentImg = carouselImages.indexOf(editSrc);
 		if (currentImg + x > carouselImages.length - 1) {
 			imgElements[i].src = carouselImages[0];
 		} else if (currentImg + x < 0) {

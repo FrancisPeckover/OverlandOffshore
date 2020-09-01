@@ -64,6 +64,7 @@ li {
 	background-repeat: no-repeat;
 	flex-direction: column;
 	margin-top: var(--header-height);
+	margin-bottom: 20px;
 }
 
 .banner-title {
@@ -101,7 +102,7 @@ li {
 	justify-content: center;
 }
 
-.left-align {
+.justify-left {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;

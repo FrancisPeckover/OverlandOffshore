@@ -8,7 +8,7 @@ var trips = [
 	{
 		location: 'Paris Germany',
 		description: 'Ushka bushka invading the motherland while the posh french eat frog legs and wank their cats off',
-		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+		image: '../img/camping2.jpg'
 	},
 
 	{
@@ -22,44 +22,45 @@ var trips = [
 		location: 'weed Whaker',
 		description:
 			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
-		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+		image: '../img/fishing1.jpg'
 	},
 
 	{
 		location: 'Oregano',
 		description:
 			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
-		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+		image: '../img/boat2.jpg'
 	},
 
 	{
 		location: 'China',
 		description:
 			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
-		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+		image: '../img/camping1.jpg'
 	},
 
 	{
 		location: 'Moon Space',
 		description:
 			'Space Pirates! Thats why were really heading to the other planets. Space gold and space bitches you know',
-		image: 'https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Tanks.jpg'
+		image: '../img/boat1.jpg'
 	}
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
 	addTrips();
+	populate(trips[0]);
 });
 
 function addTrips() {
-	var container = document.getElementById('trips');
+	var container = document.getElementById('trips').childNodes[1];
+	console.log(container);
 	trips.forEach((trip) => {
-		container.innerHTML += `
-		<a onclick="" href="" class="card fill">
-                <img class="fill" src=${trip.image} alt="">
-                <div class="overlay">
-                    <p class="fill center">${trip.location}</p>
-                </div>
-            </a>`;
+		container.innerHTML += `<img class="fill" onclick="populate(${trip})" src=${trip.image} alt="">`;
 	});
+}
+
+function populate(trip) {
+	var container = document.getElementById('trips').childNodes[3];
+	container.innerHTML = `<p>${trip.description}</p>`;
 }

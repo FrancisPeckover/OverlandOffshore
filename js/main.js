@@ -44,13 +44,13 @@ const footer = `<div class="footer center">
 			<li class="center"><a class="fa fa-instagram" href=""></a></li>
 		</ul>
 		<div id="carousel" class="carousel center">
-		<button class="fa fa-arrow-left center arrow" onclick="rotateCarousel(-1)"></button>
-		<img class="bg-bg-img" src=${carouselImages[0]} alt="">
-		<img class="bg-img" src=${carouselImages[1]} alt="">
-		<img src=${carouselImages[2]} alt="">
-		<img class="bg-img" src=${carouselImages[3]} alt="">
-		<img class="bg-bg-img" src=${carouselImages[4]} alt="">
-		<button class="fa fa-arrow-right center arrow" onclick="rotateCarousel(1)"></button>
+			<button class="fa fa-arrow-left center arrow" onclick="rotateCarousel(-1)"></button>
+			<img style="transform: translateX(50%);" class="bg-bg-img" src=${carouselImages[0]} alt="">
+			<img style="transform: translateX(25%);"  class="bg-img" src=${carouselImages[1]} alt="">
+			<img style="z-index: 2;" src=${carouselImages[2]} alt="">
+			<img style="transform: translateX(-25%);" class="bg-img" src=${carouselImages[3]} alt="">
+			<img style="transform: translateX(-50%);" class="bg-bg-img" src=${carouselImages[4]} alt="">
+			<button class="fa fa-arrow-right center arrow" onclick="rotateCarousel(1)"></button>
 		</div>
 		<button class="to-top" onclick="setScroll(0)">Back to top</button>
 		<p class="copyright"><i class="fa fa-copyright"></i> Overland Offshore 2020. Website by Duality Designs</p>

@@ -12,6 +12,7 @@ p {
 	display: grid;
 	grid-template-rows: minmax(auto, 800px);
 	grid-template-columns: auto 10fr;
+	text-align: center;
 }
 
 .selector {

@@ -68,6 +68,6 @@ function addTrips() {
 function populate(trip) {
 	var container = document.getElementById('trips').childNodes[3];
 	container.innerHTML = `
-	<img style="max-width: 90%;" src=${trip.image} alt="">
+	<img style="max-width: 100%; padding-bottom: 5%" src=${trip.image} alt="">
 	<p class="center">${trip.description}</p>`;
 }

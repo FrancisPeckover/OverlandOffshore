@@ -25,8 +25,16 @@ p {
 }
 
 .selector > img {
-	min-width: 200px;
+	min-width: 100px;
+	max-width: 200px;
 	min-height: auto;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.selector > img:hover {
+	opacity: 1;
+	transition: opacity 500ms;
 }
 
 @media screen and (max-width: 1000px) {

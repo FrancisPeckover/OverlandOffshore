@@ -25,9 +25,6 @@ const links = [
 
 const navigation = `
 <div id="header" class="header">
-	<a href="#" class="logo">
-		<img class="fill" src=${carouselImages[0]} alt="">
-	</a>
 	<ul class="nav center">
 		<a class="nav-link center fill" href=${links[0]}><i class="fa fa-home"></i><p>Home</p></a>
 		<a class="nav-link center fill" href=${links[1]}><i class="fa fa-ship"></i><p>Adventures</p></a>

@@ -68,14 +68,14 @@ li {
 	margin-top: var(--header-height);
 	position: relative;
 	overflow: visible;
-	margin-bottom: 7rem;
+	margin-bottom: 4rem;
 }
 
 .banner-container::before {
 	position: absolute;
 	display: block;
 	bottom: 0;
-	height: 15%;
+	height: 10%;
 	background: var(--colour-secondary);
 	width: 100%;
 	overflow: visible;
@@ -88,8 +88,8 @@ li {
 	display: block;
 	bottom: 0;
 	transform: translateY(50%);
-	width: 7rem;
-	height: 7rem;
+	width: 8rem;
+	height: 8rem;
 	content: "";
 	background: url('../img/hat.jpg');
 	background-size: contain;
@@ -167,21 +167,14 @@ li {
 	position: fixed;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 	transition: opacity 300ms;
 	z-index: 5;
 }
 
-.logo {
-	width: 60px;
-	height: 100%;
-	margin-left: 5%;
-	overflow: hidden;
-}
-
 .nav {
 	width: 600px;
-	margin-right: 5%;
+	margin-right: 1%;
 }
 
 .nav p {
@@ -247,10 +240,6 @@ li {
 .carousel {
 	margin: 10% 0;
 	width: 100%;
-}
-
-.carousel img {
-	border: 2px solid var(--colour-primary);
 }
 
 .bg-img {
